@@ -1,7 +1,7 @@
 /*
  ShiftRegister.h - Library for ShiftRegister [74CH595].
  Created by Arnaud VEBER, August 4, 2013.
- http://github.com/VEBERArnaud
+ http://github.com/VEBERArnaud/ShiftRegister__ArduinoLibrary
  */
 
 #ifndef ShiftRegister_h

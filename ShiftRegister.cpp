@@ -1,7 +1,7 @@
 /*
  ShiftRegister.h - Library for ShiftRegister [74CH595].
  Created by Arnaud VEBER, August 4, 2013.
- http://github.com/VEBERArnaud
+ http://github.com/VEBERArnaud/ShiftRegister__ArduinoLibrary
  */
 
 #include "Arduino.h"
@@ -10,19 +10,19 @@
 
 ShiftRegister::ShiftRegister(int SERPin, int RCLKPin, int SRCLKPin, int nbRegPin)
 {
-    // SERPin
+    // SER Pin
     pinMode(SERPin, OUTPUT);
     _SERPin = SERPin;
     
-    // RCLKPin
+    // RCLK Pin
     pinMode(RCLKPin, OUTPUT);
     _RCLKPin = RCLKPin;
     
-    // SRCLKPin
+    // SRCLK Pin
     pinMode(SRCLKPin, OUTPUT);
     _SRCLKPin = SRCLKPin;
     
-    // nbRegPin
+    // total number of pins out of ShiftRegisters
     _nbRegPin = nbRegPin;
 }
 
