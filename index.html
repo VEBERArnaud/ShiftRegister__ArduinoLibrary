@@ -1,1 +1,60 @@
-My GitHub Page
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ShiftRegister__ArduinoLibrary</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- JavaScript -->
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+        
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+    </head>
+    
+    <body data-spy="scroll" data-target=".navbar">
+        <div class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=".">ShiftRegister__AL</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#hello">Welcome</a></li>
+                        <li><a href="#install">Install</a></li>
+                        <li><a href="#use">Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a id="hello" style="visibility: hidden;">test</a>
+            <div class="page-header">
+                <h1>Welcome</h1>
+            </div>
+            <p>Soon ...</p>
+            
+            <a id="install" style="visibility: hidden;">test</a>
+            <div class="page-header">
+                <h1>How to install</h1>
+            </div>
+            <p>Soon ...</p>
+            
+            <a id="use" style="visibility: hidden;">test</a>
+            <div class="page-header">
+                <h1>How to use</h1>
+            </div>
+            <p>Soon ...</p>
+        </div>
+        
+        <script>
+            $(".navbar ul li a[href^='#']").on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
+            });
+        </script>
+    </body>
+</html>
