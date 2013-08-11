@@ -3,15 +3,50 @@
     <head>
         <title>ShiftRegister__ArduinoLibrary</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- JavaScript -->
-        <script src="//code.jquery.com/jquery.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-        
+
         <!-- StyleSheets -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+        <link rel="stylesheet/less" type="text/css" href="less/bootstrap-3_0_0/bootstrap.less" />
+        <link rel="stylesheet/less" type="text/css" href="less/VEBERArnaud/custom.less" />
+
+        <!-- JavaScript [jquery] -->
+        <script src="js/jquery/1_10_2.js"></script>
+        
+        <!-- JavaScript [less]-->
+        <script type="text/javascript">
+            less = {
+                env: "production",
+                async: false,
+                fileAsync: true,
+                poll: 1000,
+                functions: {},
+                dumpLineNumbers: "comments",
+                relativeUrls: false,
+                rootpath: ":/a.com/"
+            };
+        </script>
+        <script src="js/less/1_4_1.js"></script>
+        
+        <!-- JavaScript [bootstrap] -->
+        <script src="js/bootstrap-3_0_0/affix.js"></script>
+        <script src="js/bootstrap-3_0_0/alert.js"></script>
+        <script src="js/bootstrap-3_0_0/button.js"></script>
+        <script src="js/bootstrap-3_0_0/carousel.js"></script>
+        <script src="js/bootstrap-3_0_0/collapse.js"></script>
+        <script src="js/bootstrap-3_0_0/dropdown.js"></script>
+        <script src="js/bootstrap-3_0_0/modal.js"></script>
+        <script src="js/bootstrap-3_0_0/scrollspy.js"></script>
+        <script src="js/bootstrap-3_0_0/tab.js"></script>
+        <script src="js/bootstrap-3_0_0/tooltip.js"></script>
+        <script src="js/bootstrap-3_0_0/popover.js"></script>
+        <script src="js/bootstrap-3_0_0/transition.js"></script>
+        
+        <!-- JavaScript [holder] -->
+        <script src="js/holder/2_0.js"></script>
+        
+        <!-- JavaScript [VEBERArnaud] -->
+        <script src="js/VEBERArnaud/custom.js"></script>
     </head>
-    
+
     <body data-spy="scroll" data-target=".navbar">
         <div class="navbar navbar-fixed-top navbar-inverse">
             <div class="container">
@@ -23,37 +58,167 @@
                 <a class="navbar-brand" href=".">ShiftRegister__AL</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#hello">Welcome</a></li>
-                        <li><a href="#install">Install</a></li>
-                        <li><a href="#use">Use</a></li>
+                        <li class="active">
+                            <a href="#hello">Welcome</a>
+                        </li>
+                        <li>
+                            <a href="#install">Install</a>
+                        </li>
+                        <li>
+                            <a href="#use">Use</a>
+                        </li>
+                        <li>
+                            <a href="#releases">Releases</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right hidden-sm">
+                        <li id="fat-menu" class="dropdown">
+                            <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                VEBERArnaud
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="http://github.com/VEBERArnaud">My other projects</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li class="dropdown-header">Keep in touch</li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="http://twitter.com/VEBERArnaud">Twitter</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="http://www.linkedin.com/profile/view?id=131311561">LinkedIn</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="http://us.viadeo.com/profile/0029mtdbvuz7vhm">Viadeo</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+        
         <div class="container">
-            <a id="hello" style="visibility: hidden;">test</a>
-            <div class="page-header">
-                <h1>Welcome</h1>
+            <div class="paged">
+                <a id="hello" style="visibility: hidden;">&nbsp;</a>
+                <div class="page-header">
+                    <h1>Welcome</h1>
+                </div>
+                <p>Coming soon</p>
             </div>
-            <p>Soon ...</p>
-            
-            <a id="install" style="visibility: hidden;">test</a>
-            <div class="page-header">
-                <h1>How to install</h1>
+            <div class="paged">
+                <a id="install" style="visibility: hidden;">&nbsp;</a>
+                <div class="page-header">
+                    <h1>Install the library</h1>
+                </div>
+                <div class="alert alert-info">
+                    <h4>Arduino Software</h4>
+                    Please note that 
+                    <strong>ShiftRegister__ArduinoLibrary</strong>
+                    require the 
+                    <a data-toggle="modal" href="#arduinoModal">Arduino IDE</a>
+                    .
+                </div>
+                <p class="lead">First you need to clone the GitHub repository</p>
+                <div class="well">
+                    <code>$ cd /your/destination/folder</code><br />
+                    <code>$ git clone https://github.com/VEBERArnaud/ShiftRegister__ArduinoLibrary.git</code>
+                </div>
+                <p class="lead">Then in the Arduino IDE</p>
+                <div class="well">
+                    <code>From the menu: Sketch > Import Library</code><br />
+                    <code>Select "/your/destination/folder/ShiftRegister__ArduinoLibrary/"</code>
+                </div>
+                <p class="lead">That's it, ShiftRegister__ArduinoLibrary is now ready to use !</p>
             </div>
-            <p>Soon ...</p>
-            
-            <a id="use" style="visibility: hidden;">test</a>
-            <div class="page-header">
-                <h1>How to use</h1>
+            <div class="paged">
+                <a id="use" style="visibility: hidden;">&nbsp;</a>
+                <div class="page-header">
+                    <h1>Use the library</h1>
+                </div>
+                <p>Coming soon</p>
             </div>
-            <p>Soon ...</p>
+            <div class="paged">
+                <a id="releases" style="visibility: hidden;">&nbsp;</a>
+                <h1>Releases</h1>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#v1-0-0" data-toggle="tab">V 1.0.0 [current]</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="v1-0-0" class="tab-pane active">
+                            <h4>Files</h4>
+                            <p>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    README.md
+                                </span>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    ShiftRegister.cpp
+                                </span>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    ShiftRegister.h
+                                </span>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    keywords.txt
+                                </span>
+                            </p>
+                            <h4>Methods</h4>
+                            <p>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    ShiftRegister::ShiftRegister(int SERPin, int RCLKPin, int SRCLKPin, int nbRegPin)
+                                </span>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    void ShiftRegister::write(int configuration[])
+                                </span>
+                                <span class="lined">
+                                    <span class="label label-success">A</span>
+                                    void ShiftRegister::clear()
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="arduinoModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Arduino IDE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            See the 
+                            <a href="http://arduino.cc/en/Main/Software" target="_blank">download page</a>
+                        </p>
+                        <p class="lead">or</p>
+                        <p>
+                            Clone the 
+                            <a href="http://github.com/arduino/Arduino" target="_blank">GitHub repository</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <script>
+            // smooth scroll from navbar
             $(".navbar ul li a[href^='#']").on('click', function(e) {
                 e.preventDefault();
                 $('html, body').animate({ scrollTop: $(this.hash).offset().top }, 300);
+            });
+            
+            $("a[href^='#']").on('click', function(e) {
+                
             });
         </script>
     </body>
